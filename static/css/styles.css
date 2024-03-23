@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#recipe-list {
+    list-style-type: none;
+}

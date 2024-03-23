@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>platemate</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+    <h1>Welcome to platemate</h1>
+    <p>Upload a picture of your dish, and we'll suggest recipes for you.</p>
+
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Identify Dish</button>
+    </form>
+
+    <div id="results" style="display:none;">
+        <h2>Dish Identification</h2>
+        <p id="dish-name"></p>
+
+        <h2>Recommended Recipes</h2>
+        <ul id="recipes"></ul>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
