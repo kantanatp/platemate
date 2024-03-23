@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify, render_template
-import os
-
+from transformers import pipeline
+from PIL import Image
+import io
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = ''       # paste secret key
+app.config['SECRET_KEY'] = 'your_secret_key_here'
+
+model_pipeline = pipeline(task="image-classification", model="nateraw/food")
 
 @app.route('/')
 def home():
@@ -20,15 +23,19 @@ def upload_image():
         return jsonify({'error': 'No image selected'}), 400
     
     if file:
-        # process image
-        # send to google cloud vision API
-        # placeholder response
+        image = Image.open(io.BytesIO(file.read()))
+
+        predictions = model_pipeline(images=image, top_k=3)
         
-        identified_dish = ""    # placeholder response
-        
-        recipes = ["recipe1", "recipe2", "recipe3"]    # placeholder response
-        
-        return jsonify({'dish': identified_dish, 'recipes': recipes})
+        if predictions:
+            identified_dish = predictions[0]['label']
+            score = predictions[0]['score']
+
+            recipes = ["recipe1", "recipe2", "recipe3"]
+            
+            return jsonify({'dish': identified_dish, 'score': score, 'recipes': recipes})
+        else:
+            return jsonify({'error': 'No dish recognized'})
     
     return jsonify({'error': 'Something went wrong'}), 500
 
