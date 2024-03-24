@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dish }} Recipes - platemate</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 id="logo">platemate</h1>
+    </header>
+    
+    <div id="main-content">
+        <h2>Recipes for {{ dish }}:</h2>
+        {% for recipe in recipes %}
+            <details>
+                <summary>{{ recipe.title }}</summary>
+                <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </details>
+        {% endfor %}
+        <button onclick="window.location.href='/'">Upload another image</button>
+    </div>
+</body>
+</html>

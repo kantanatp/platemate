@@ -4,5 +4,10 @@ requests==2.31.0
 beautifulsoup4==4.12.3
 lxml==5.1.0
 python-dotenv==0.13.0
-Pillow==10.2.0
+Pillow<10,>=6.2.0
 transformers==4.39.1
+recipe-scrapers==14.55.0
+torch==2.2.1
+torchvision==0.17.1
+torchaudio==2.2.1
+tornado>=6.0.3,<6.2

@@ -5,20 +5,33 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
-    <h1>Welcome to platemate</h1>
-    <p>Upload a picture of your dish, and we'll suggest recipes for you.</p>
+    <header>
+        <h1 id="logo">platemate</h1>
+    </header>
+    
+    <div id="main-content">
+        <p>Upload a picture of your dish, and we'll suggest recipes for you.</p>
 
-    <form id="upload-form" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*" required>
-        <button type="submit">Identify Dish</button>
-    </form>
+        <div id="upload-form">
+            <form enctype="multipart/form-data">
+                <div id="file-upload-container">
+                    <input type="file" name="image" id="file-upload" accept="image/*" required hidden />
+                    <label for="file-upload" id="file-upload-label">Select Image</label>
+                </div>
+                <button type="submit">Identify Dish</button>
+            </form>
+        </div>
+        
 
-    <div id="results" style="display:none;">
-        <h2>Dish Identification</h2>
-        <p id="dish-name"></p>
+        <div id="results" style="display:none;">
+            <h2>Dish Identification</h2>
+            <p id="dish-name"></p>
 
-        <h2>Recommended Recipes</h2>
-        <ul id="recipes"></ul>
+            <div id="ingredients-section">
+                <h2>Recommended Recipes</h2>
+                <!-- Recipe ingredients will be populated here -->
+            </div>
+        </div>
     </div>
 
     <script src="static/js/main.js"></script>
