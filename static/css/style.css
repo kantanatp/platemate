@@ -115,7 +115,13 @@ header {
 }
 
 .recipe-source-link:hover {
+    color: #C8A2C8;
     text-decoration: underline; 
+}
+
+.regenerate-link:hover {
+    color: #C8A2C8;
+    text-decoration: underline;
 }
 
 .recipe-source-link:nth-child(1) { font-size: 18px; }
