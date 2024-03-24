@@ -77,6 +77,11 @@ header {
     border-color: #C8A2C8; 
 }
 
+.upload-btn:hover {
+    background-color: #A283A2; 
+    color: white; 
+}
+
 #file-chosen {
     display: block;
     margin-top: 10px;
