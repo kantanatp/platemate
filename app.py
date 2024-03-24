@@ -133,6 +133,43 @@ def ingredients():
 
     return render_template('ingredients.html', ingredients=cleaned_ingredients, recipe_url=recipe_url)
 
+@app.route('/sustainable-example')
+def sustainable_example():
+    recipe_url = request.args.get('url')
+    storage_tips = ""
+    if recipe_url == "https://www.recipetineats.com/carbonara/":
+        storage_tips = {
+            'title': 'Leftover Ingredients Storage Tips',
+            'tips': [
+                'guanciale: plastic wrapped in refrigerator',
+                'eggs: stored in refrigerator at 40F',
+                'parmigiano reggiano: plastic wrapped in refrigerator',
+                'black pepper: store in airtight container',
+                'spaghetti: store in cool, dry place',
+                'salt: store in airtight container',
+                'garlic: store in refrigerator'
+            ],
+            'leftovers': 'Store in airtight container in refrigerator for 3-5 days'
+        }
+    elif recipe_url == "https://tastesbetterfromscratch.com/pad-thai/":
+        storage_tips = {
+            'title': 'Leftover Ingredients Storage Tips',
+            'tips': [
+                'flat rice noodle: store in airtight container',
+                'garlic: store in refrigerator',
+                'shrimp: store in refrigerator, can be kept up to 3 days',
+                'chicken: store in refrigerator, can be kept up to 3 days',
+                'eggs: stored in refrigerator at 40F',
+                'bean sprouts: cover with paper towel and store in refrigerator',
+                'green onions: store in refrigerator',
+                'lime: store in refrigerator',
+                'fish sauce: store in cool, dark place',
+                'soy sauce: store in cool, dark place'
+            ],
+            'leftovers': 'Store in airtight container in refrigerator for up to 3 days'
+        }
+    return render_template('sustainable(example).html', storage_tips=storage_tips, recipe_url=recipe_url)
+
 if __name__ == '__main__':
     app.run(debug=True)
 

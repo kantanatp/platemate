@@ -35,6 +35,7 @@
                 {% endif %}
                 <p class="source-text mt-4">Source: <a href="{{ recipe_url }}">{{ recipe_url }}</a></p> <!-- Moved inside the container -->
             </div>
+            <a href="{{ url_for('sustainable_example', url=recipe_url) }}" class="btn-sustainable">Sustainability Tips</a>
         </div>        
     </main>
 
