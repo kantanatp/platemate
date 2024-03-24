@@ -171,7 +171,18 @@ header {
     text-decoration: none; /* Ensure underline doesn't reappear on hover */
 }
 
+.btn-sustainable {
+    display: inline-block;
+    background-color: #C8A2C8; /* Your specified color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
 
-
-
-
+.btn-sustainable:hover {
+    color: #FFFFFF;
+    background-color: #A283A2; /* Slightly darker purple on hover for feedback */
+    text-decoration: none; /* Ensure underline doesn't reappear on hover */
+}
