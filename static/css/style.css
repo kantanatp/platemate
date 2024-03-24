@@ -79,6 +79,7 @@ header {
 
 .upload-btn:hover {
     background-color: #A283A2; 
+    border-color: #A283A2;
     color: white; 
 }
 
