@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy! - platemate</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="bg-purple text-white text-right p-3">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <h1 class="m-0">platemate</h1>
+            </a>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container text-center">
+            <div class="instructions">
+                <div class="number-circle">4</div>
+                <p>Enjoy!</p>
+            </div>
+        
+            <div class="ingredients-container"> <!-- Updated class name -->
+                {% if ingredients %}
+                    <ul class="ingredients-list"> <!-- List class remains the same -->
+                        {% for ingredient in ingredients %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Sorry, no ingredients were found for this recipe.</p>
+                {% endif %}
+                <p class="source-text mt-4">Source: <a href="{{ recipe_url }}">{{ recipe_url }}</a></p> <!-- Moved inside the container -->
+            </div>
+        </div>        
+    </main>
+
+    <!-- Bootstrap and custom scripts -->
+</body>
+</html>

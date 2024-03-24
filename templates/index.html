@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>platemate</title>
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <header>
-        <h1 id="logo">platemate</h1>
+    <header class="bg-purple text-white text-right p-3">
+        <div class="container">
+            <!-- Wrap the logo in an <a> tag pointing to the root URL -->
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <h1 class="m-0">platemate</h1>
+            </a>
+        </div>
     </header>
-    
-    <div id="main-content">
-        <p>Upload a picture of your dish, and we'll suggest recipes for you.</p>
 
-        <div id="upload-form">
-            <form enctype="multipart/form-data">
-                <div id="file-upload-container">
-                    <input type="file" name="image" id="file-upload" accept="image/*" required hidden />
-                    <label for="file-upload" id="file-upload-label">Select Image</label>
+    <main class="py-5">
+        <div class="container">
+            <section class="how-it-works text-center">
+                <h2>How It Works</h2>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-3 step mb-4">
+                        <div class="number-circle">1</div>
+                        <p class="mt-2">Upload a picture of your dish!</p>
+                    </div>
+                    <div class="col-md-3 step mb-4">
+                        <div class="number-circle">2</div>
+                        <p class="mt-2">We'll show you the dishes we found.</p>
+                    </div>
+                    <div class="col-md-3 step mb-4">
+                        <div class="number-circle">3</div>
+                        <p class="mt-2">Pick the recipe source.</p>
+                    </div>
+                    <div class="col-md-3 step mb-4">
+                        <div class="number-circle">4</div>
+                        <p class="mt-2">Take note, screenshot, or do whatever you want with the ingredients!</p>
+                    </div>
                 </div>
-                <button type="submit">Identify Dish</button>
-            </form>
+                <a href="{{ url_for('upload_image') }}" class="btn btn-secondary mt-3">Let's begin</a>
+            </section>
         </div>
-        
+    </main>
 
-        <div id="results" style="display:none;">
-            <h2>Dish Identification</h2>
-            <p id="dish-name"></p>
-
-            <div id="ingredients-section">
-                <h2>Recommended Recipes</h2>
-                <!-- Recipe ingredients will be populated here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="static/js/main.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

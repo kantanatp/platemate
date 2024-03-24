@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Recipe Source - platemate</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="bg-purple text-white text-right p-3">
+        <div class="container">
+            <!-- Wrap the logo in an <a> tag pointing to the root URL -->
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <h1 class="m-0">platemate</h1>
+            </a>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container text-center">
+            <div class="instructions">
+                <div class="number-circle">3</div>
+                <p>Choose your recipe source!</p>
+            </div>
+
+            <div class="options">
+                {% for site_name, site_url in matched_sites %}
+                    <a href="{{ url_for('ingredients', url=site_url) }}" class="recipe-source-link">{{ site_name }}</a>
+                {% endfor %}
+            </div>
+            
+            
+            <p class="small-text mt-4">
+                <!-- Ensure this uses the regenerate-link class -->
+                <a href="{{ url_for('recipe_sources', dish=dish) }}" class="regenerate-link">Nothing interesting? Regenerate...</a>
+            </p>
+            
+        </div>
+    </main>
+
+    <!-- Bootstrap and custom scripts -->
+</body>
+</html>
