@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Dish - platemate</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="bg-purple text-white text-right p-3">
+        <div class="container">
+            <!-- Wrap the logo in an <a> tag pointing to the root URL -->
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <h1 class="m-0">platemate</h1>
+            </a>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container text-center">
+            <div class="upload-instructions">
+                <div class="number-circle">1</div>
+                <p>Upload your dish!</p>
+                <p class="small-text">see it on instagram and don't know what it is? or was it on a blog post? pinterest? anything works!</p>
+            </div>
+
+            <form id="uploadForm" action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" id="dishImage" name="image" class="input-file" accept="image/*" hidden>
+                <label for="dishImage" class="btn btn-primary upload-btn">Upload Picture</label>
+                <span id="file-chosen">No file chosen</span>
+                <button type="submit" id="nextButton" class="btn btn-secondary mt-3" hidden>Next</button>
+            </form>            
+
+            <button id="nextButton" class="btn btn-secondary mt-3" hidden>Next</button>
+        </div>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script src="/static/js/upload.js"></script>
+</body>
+</html>

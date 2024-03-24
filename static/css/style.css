@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #5C5552; /* Dark grey text for contrast */
+}
+
+header {
+    background-color: #C8A2C8; /* Lighter purple */
+    color: white;
+    padding: 20px;
+    text-align: right;
+}
+
+.logo-link {
+    text-decoration: none;  /* Remove underline from link */
+    color: white;  /* Match the color with your header text */
+}
+
+.logo-link:hover, .logo-link:focus {
+    text-decoration: none;  /* Remove underline on hover/focus */
+    color: white;  /* Keep the color consistent on hover/focus */
+}
+
+
+.header-content h1 {
+    margin: 0;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 30px 0; /* Reduced padding for more balanced spacing */
+}
+
+.steps .step {
+    margin-bottom: 30px;
+}
+
+.bg-purple {
+    background-color: #C8A2C8; /* Lighter purple, consistent with the header */
+}
+
+.number-circle {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background: #C8A2C8; /* Lighter purple */
+    color: white; /* White text for contrast */
+    border: 2px solid #C8A2C8; /* Lighter purple border */
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    margin: auto;
+}
+
+.step p {
+    font-size: 16px;
+}
+
+.upload-instructions {
+    margin-bottom: 30px;
+}
+
+.small-text {
+    font-size: 14px; /* Smaller font for the sub-instruction */
+    color: #6c757d; /* Slightly greyed text for less emphasis */
+}
+
+.input-file {
+    display: none; /* Hide the default file input */
+}
+
+.upload-btn {
+    background-color: #C8A2C8; /* Match the purple theme */
+    border-color: #C8A2C8; /* Ensure the border matches the button */
+}
+
+#file-chosen {
+    display: block;
+    margin-top: 10px;
+}
+
+.instructions p {
+    margin-bottom: 30px;
+}
+
+.dish-option {
+    display: block;
+    margin: 10px auto;
+    color: #C8A2C8; /* Purple text */
+    transition: color 0.3s ease;
+}
+
+.dish-option:hover {
+    color: #5C5552; /* Dark grey for hover effect */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.try-again-link {
+    color: #5C5552; /* Dark grey to match theme */
+    text-decoration: underline; /* Make it obvious it's a clickable link */
+}
+
+.recipe-source-link {
+    color: #C8A2C8; /* Purple text */
+    display: block; /* Each link takes its own line */
+    margin: 10px 0; /* Add some vertical margin for spacing */
+    text-decoration: none; /* Remove underline */
+}
+
+.recipe-source-link:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+/* Adjust font sizes based on link order */
+.recipe-source-link:nth-child(1) { font-size: 18px; }
+.recipe-source-link:nth-child(2) { font-size: 16px; }
+.recipe-source-link:nth-child(3) { font-size: 14px; }
+.recipe-source-link:nth-child(4) { font-size: 12px; }
+.recipe-source-link:nth-child(5) { font-size: 10px; }
+
+.regenerate-link {
+    color: #6c757d; /* Grey text */
+    text-decoration: underline; /* Make it obvious it's a clickable link */
+}
+
+.ingredients-container {
+    text-align: left; /* Align the contents to the left */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    max-width: 80%; /* Limit the width to enhance readability */
+}
+
+.ingredients-list {
+    list-style-type: disc; /* Use disc-style bullet points */
+    padding-left: 20px; /* Adjust padding to align with the "Enjoy!" title */
+}
+
+.ingredients-list li {
+    margin-bottom: 5px; /* Add some space between list items */
+}
+
+.source-text a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #5C5552; /* Set to your desired color, example uses a dark grey similar to regular text */
+}
+
+.source-text a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover for better UX */
+}
+
+.btn-try-again {
+    color: #FFFFFF; /* White text */
+    background-color: #C8A2C8; /* Purple background to match the theme */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allows padding and other box model properties */
+    margin-top: 20px; /* Add some space above the button */
+}
+
+.btn-try-again:hover {
+    color: #FFFFFF;
+    background-color: #A283A2; /* Slightly darker purple on hover for feedback */
+    text-decoration: none; /* Ensure underline doesn't reappear on hover */
+}
+
+
+
+
+
