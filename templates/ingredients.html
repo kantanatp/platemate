@@ -23,9 +23,9 @@
                 <p>Enjoy!</p>
             </div>
         
-            <div class="ingredients-container"> <!-- Updated class name -->
+            <div class="ingredients-container"> 
                 {% if ingredients %}
-                    <ul class="ingredients-list"> <!-- List class remains the same -->
+                    <ul class="ingredients-list">
                         {% for ingredient in ingredients %}
                             <li>{{ ingredient }}</li>
                         {% endfor %}
@@ -33,12 +33,11 @@
                 {% else %}
                     <p>Sorry, no ingredients were found for this recipe.</p>
                 {% endif %}
-                <p class="source-text mt-4">Source: <a href="{{ recipe_url }}">{{ recipe_url }}</a></p> <!-- Moved inside the container -->
+                <p class="source-text mt-4">Source: <a href="{{ recipe_url }}">{{ recipe_url }}</a></p>
             </div>
             <a href="{{ url_for('sustainable_example', url=recipe_url) }}" class="btn-sustainable">Sustainability Tips</a>
         </div>        
     </main>
 
-    <!-- Bootstrap and custom scripts -->
 </body>
 </html>

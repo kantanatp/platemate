@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>platemate</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header class="bg-purple text-white text-right p-3">
         <div class="container">
-            <!-- Wrap the logo in an <a> tag pointing to the root URL -->
             <a href="{{ url_for('index') }}" class="logo-link">
                 <h1 class="m-0">platemate</h1>
             </a>
@@ -41,7 +39,7 @@
                     </div>
                     <div class="col-6 col-md-2 step mb-4">
                         <div class="number-circle">5</div>
-                        <p class="mt-2">Want to be sustainable?, here are some storage tips for leftovers!</p>
+                        <p class="mt-2">Sustainability? Here are some tips for storing leftovers!</p>
                     </div>
                 </div>
                 <a href="{{ url_for('upload_image') }}" class="btn btn-secondary mt-3">Let's begin</a>
@@ -49,7 +47,6 @@
         </div>
     </main>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

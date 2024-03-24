@@ -10,7 +10,6 @@
 <body>
     <header class="bg-purple text-white text-right p-3">
         <div class="container">
-            <!-- Wrap the logo in an <a> tag pointing to the root URL -->
             <a href="{{ url_for('index') }}" class="logo-link">
                 <h1 class="m-0">platemate</h1>
             </a>
@@ -32,13 +31,11 @@
             
             
             <p class="small-text mt-4">
-                <!-- Ensure this uses the regenerate-link class -->
                 <a href="{{ url_for('recipe_sources', dish=dish) }}" class="regenerate-link">Nothing interesting? Regenerate...</a>
             </p>
             
         </div>
     </main>
 
-    <!-- Bootstrap and custom scripts -->
 </body>
 </html>
